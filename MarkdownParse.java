@@ -13,25 +13,12 @@ public class MarkdownParse {
         int currentIndex = 0;
         while(currentIndex < markdown.length()) {
             
-            
             int exclamation = -1;
             exclamation = markdown.indexOf("!");
             int openBracket = markdown.indexOf("[", currentIndex);
-            if(openBracket == -1){
-                break;
-            }
             int closeBracket = markdown.indexOf("]", openBracket);
-            if(closeBracket == -1){
-                break;
-            }
             int openParen = markdown.indexOf("(", closeBracket);
-            if(openParen == -1){
-                break;
-            }
             int closeParen = markdown.indexOf(")", openParen);
-            if(closeParen == -1){
-                break;
-            }
             if(exclamation == -1 ||  exclamation != openBracket - 1){
                 toReturn.add(markdown.substring(openParen + 1, closeParen));
             }
