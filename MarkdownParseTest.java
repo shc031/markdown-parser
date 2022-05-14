@@ -1,4 +1,4 @@
-/*
+
 import static org.junit.Assert.*;
 import org.junit.*;
 import java.io.IOException;
@@ -22,4 +22,3 @@ public class MarkdownParseTest{
         assertEquals(toReturn, MarkdownParse.getLinks(content));
     }
 }
-*/
